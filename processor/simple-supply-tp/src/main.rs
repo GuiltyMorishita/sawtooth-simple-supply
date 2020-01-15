@@ -1,13 +1,9 @@
-mod addresser;
-mod handler;
-mod state;
-
-use handler::SimpleSupplyTransactionHandler;
 use log::LevelFilter;
 use log4rs::append::console::ConsoleAppender;
 use log4rs::config::{Appender, Config, Root};
 use log4rs::encode::pattern::PatternEncoder;
 use sawtooth_sdk::processor::TransactionProcessor;
+use simple_supply_tp::handler::SimpleSupplyTransactionHandler;
 use std::process;
 
 #[macro_use]

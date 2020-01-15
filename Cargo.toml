@@ -11,11 +11,11 @@ path = "src/protos/lib.rs"
 [dependencies]
 protobuf = "2.10.1"
 
-
 [build-dependencies]
 protoc-grpcio = "1.1.0"
 
 [workspace]
 members = [
   "processor/simple-supply-tp",
+  "rest-api/simple-supply-rest-api",
 ]

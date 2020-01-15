@@ -5,7 +5,7 @@ use sawtooth_sdk::processor::handler::ApplyError;
 use sawtooth_sdk::processor::handler::TransactionContext;
 use sawtooth_sdk::processor::handler::TransactionHandler;
 
-use crate::addresser::{namespace, FAMILY_NAME, FAMILY_VERSION};
+use crate::addresser::{get_namespace, FAMILY_NAME, FAMILY_VERSION};
 use crate::state::SimpleSupplyState;
 
 pub struct SimpleSupplyTransactionHandler {
@@ -19,7 +19,7 @@ impl SimpleSupplyTransactionHandler {
         SimpleSupplyTransactionHandler {
             family_name: FAMILY_NAME.to_string(),
             family_versions: vec![FAMILY_VERSION.to_string()],
-            namespaces: vec![namespace().to_string()],
+            namespaces: vec![get_namespace().to_string()],
         }
     }
 }
@@ -80,6 +80,9 @@ fn create_agent(
         Ok(None) => (),
         Err(e) => return Err(e),
     }
+
+    println!("{}", public_key);
+    println!("{:?}", payload);
 
     state.set_agent(
         public_key,

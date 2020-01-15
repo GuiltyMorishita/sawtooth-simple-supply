@@ -1,0 +1,32 @@
+[package]
+name = "simple-supply-rest-api"
+version = "0.1.0"
+authors = ["GuiltyMorishita <morilliantblue@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sawtooth-sdk = "0.4"
+actix-web = "2.0"
+actix-rt = "1.0"
+serde = "1.0"
+serde_json = "1.0"
+protobuf = "2.10"
+rust-crypto = "0.2"
+openssl = "0.10"
+chrono = "0.4"
+bcrypt = "0.6"
+dotenv = "0.15"
+actix-service = "1.0"
+rustc-hex = "2.1"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+env_logger = "0.7"
+log = "0.4"
+
+sawtooth-simple-supply = { path = "../.." }
+simple-supply-tp = { path = "../../processor/simple-supply-tp" }
+
+[dependencies.diesel]
+features = ["postgres", "chrono", "r2d2"]
+version = "1.4"

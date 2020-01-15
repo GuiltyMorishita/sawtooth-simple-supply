@@ -3,7 +3,7 @@ use protos::agent::{Agent, AgentContainer};
 use sawtooth_sdk::processor::handler::ApplyError;
 use sawtooth_sdk::processor::handler::TransactionContext;
 
-use crate::addresser::{agent_address, record_address};
+use crate::addresser::{get_agent_address, get_record_address};
 
 pub struct SimpleSupplyState<'a> {
     context: &'a mut dyn TransactionContext,
@@ -15,7 +15,7 @@ impl<'a> SimpleSupplyState<'a> {
     }
 
     pub fn get_agent(&mut self, public_key: &str) -> Result<Option<Agent>, ApplyError> {
-        let address = agent_address(public_key);
+        let address = get_agent_address(public_key);
         let state_entry = self.context.get_state_entry(&address)?;
         match state_entry {
             Some(data) => {
@@ -48,7 +48,7 @@ impl<'a> SimpleSupplyState<'a> {
             ..Default::default()
         };
         let mut agent_container = AgentContainer::new();
-        let address = agent_address(public_key);
+        let address = get_agent_address(public_key);
         let state_entry = self.context.get_state_entry(&address)?;
         match state_entry {
             Some(data) => {
