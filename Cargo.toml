@@ -18,4 +18,5 @@ protoc-grpcio = "1.1.0"
 members = [
   "processor/simple-supply-tp",
   "rest-api/simple-supply-rest-api",
+  "subscriber/simple-supply-subscriber",
 ]

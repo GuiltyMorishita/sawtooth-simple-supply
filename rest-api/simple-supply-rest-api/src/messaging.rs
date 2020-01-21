@@ -127,8 +127,6 @@ impl Messenger {
             };
         }
 
-        debug!("{:?}", status_response);
-
         match status_response.get_status() {
             ClientBatchStatusResponse_Status::OK => Ok(()),
             _ => Err(SendError::UnknownError),

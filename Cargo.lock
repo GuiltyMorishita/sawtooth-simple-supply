@@ -1626,6 +1626,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "simple-supply-subscriber"
+version = "0.1.0"
+dependencies = [
+ "actix-service 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "chrono 0.4.10 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ctrlc 3.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "diesel 1.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "dotenv 0.15.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "env_logger 0.7.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "openssl 0.10.26 (registry+https://github.com/rust-lang/crates.io-index)",
+ "protobuf 2.10.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rust-crypto 0.2.36 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rustc-hex 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sawtooth-sdk 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sawtooth-simple-supply 0.1.0",
+ "simple-supply-rest-api 0.1.0",
+ "simple-supply-tp 0.1.0",
+ "uuid 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "simple-supply-tp"
 version = "0.1.0"
 dependencies = [

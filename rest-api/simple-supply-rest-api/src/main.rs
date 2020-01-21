@@ -13,12 +13,12 @@ use diesel::r2d2::{ConnectionManager, Pool};
 use dotenv::dotenv;
 use std::env;
 
-mod database;
-mod handler;
-mod messaging;
-mod model;
-mod schema;
-mod transaction_creation;
+pub mod database;
+pub mod handler;
+pub mod messaging;
+pub mod model;
+pub mod schema;
+pub mod transaction_creation;
 
 #[derive(Clone)]
 pub struct Server {

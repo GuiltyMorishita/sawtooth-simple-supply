@@ -142,7 +142,6 @@ services:
     environment:
       POSTGRES_USER: sawtooth
       POSTGRES_PASSWORD: sawtooth
-      POSTGRES_DB: simple-supply
     ports:
       - '5432:5432'
     volumes_from:
